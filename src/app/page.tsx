@@ -1,13 +1,13 @@
 import { SignInButton } from '@clerk/nextjs';
 import Image from 'next/image';
-import phone from '../../public/phone.png';
-import mock from '../../public/mock.jpg';
+import phone from '@/../../public/phone.png';
+import mock from '@/../../public/mock.jpg';
 
 export default function Home() {
   return (
     <>
       <main className="w-full min-h-screen bg-gradient-to-tl from-indigo-500 via-blue-600 to-blue-600">
-        <div className="flex flex-col items-center justify-center text-center pt-40">
+        <div className="flex flex-col items-center justify-center text-center pt-20">
           <div>
             <h1 className="text-5xl font-bold text-white ml-8">
               Study faster ⚡️
@@ -25,7 +25,7 @@ export default function Home() {
               START TODAY
             </button>
           </SignInButton>
-          <div className="w-[600px] h-auto rounded-xl mt-8 mb-16">
+          <div className="w-[600px] h-auto rounded-xl mt-10 mb-12">
             <Image
               src={phone}
               alt="Lectern AI-generated flashcards."
@@ -67,40 +67,43 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="w-full min-h-[60vh] bg-gray-900 px-8 py-20 flex flex-col md:flex-row items-center justify-between gap-8">
-          <div className="order-2 md:order-2 w-full md:w-1/2 flex justify-center">
-            <div className="w-[500px] min-h-[300px] bg-gray-800
-                            rounded-md shadow-lg flex items-center justify-center p-8">
-              <Image
-                src={mock}
-                alt="Upload your lecture to generate study materials."
-                className="min-h-[300px]"
-                style={{ objectFit: "contain" }}
-              />
+        <div className="lg:min-w">
+          <div className="w-full min-h-[60vh] bg-gray-900 px-8 py-20 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div className="order-2 md:order-2 w-full md:w-1/2 flex justify-center">
+              <div className="w-[500px] min-h-[300px] bg-gray-800
+                              rounded-md shadow-lg flex items-center justify-center p-8">
+                <Image
+                  src={mock}
+                  alt="Upload your lecture to generate study materials."
+                  className="min-h-[300px]"
+                  style={{ objectFit: "contain" }}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="order-2 md:order-1 w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left">
-            <div className="max-w-sm">
-              <h2 className="text-8xl font-extrabold text-gray-500">2</h2>
-              <h2 className="mt-4 text-3xl font-semibold text-white">
-                Study with Lectern
-              </h2>
-              <p className="mt-8 text-md text-gray-100">
-                Use Lectern's built in learning system to 
-                review materials, track progress, and more.
-              </p>
-              <SignInButton >
-                <button
-                  className="mt-8 px-7 py-3 font-bold text-white bg-blue-700 
-                            rounded-full shadow-md hover:bg-blue-600 transition"
-                >
-                  Learn more 
-                </button>
-              </SignInButton>
+            <div className="order-2 md:order-1 w-full md:w-1/2 flex flex-col md:items-end items-center text-center md:text-right">
+              <div className="max-w-sm">
+                <h2 className="text-8xl font-extrabold text-gray-500">2</h2>
+                <h2 className="mt-4 text-3xl font-semibold text-white">
+                  Study with Lectern
+                </h2>
+                <p className="mt-8 text-md text-gray-100">
+                  Use Lectern's built in learning system to 
+                  review materials, track progress, and more.
+                </p>
+                <SignInButton >
+                  <button
+                    className="mt-8 px-7 py-3 font-bold text-white bg-blue-700 
+                              rounded-full shadow-md hover:bg-blue-600 transition"
+                  >
+                    Learn more 
+                  </button>
+                </SignInButton>
+              </div>
             </div>
           </div>
-        </section>
+        </div>
+
         <section className="w-full min-h-[60vh] bg-gray-900 px-8 py-20 flex flex-col md:flex-row items-center justify-between gap-8">
           <div className="order-2 md:order-2 w-full md:w-1/2 flex justify-center">
             <div className="w-[500px] min-h-[300px] bg-gray-800
@@ -138,7 +141,6 @@ export default function Home() {
 
         <section className="w-full min-h-[90vh] bg-transparent px-8 py-20 flex flex-col items-center justify-between">
           <div className='min-w-[80vw] min-h-[70vh] bg-gray-100 rounded-lg'>
-          fill me with something
           </div>
         </section>
       </main>
