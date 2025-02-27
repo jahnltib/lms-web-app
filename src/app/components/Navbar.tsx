@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { SignedOut, SignedIn, SignInButton, SignUpButton, UserButton } from "@clerk/nextjs";
+/* import { useState } from "react"; */
+import { SignedOut, SignedIn, SignInButton, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import Image from 'next/image'
 import logoBox from '../../../public/logobox.png'

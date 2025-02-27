@@ -88,7 +88,7 @@ export default function Home() {
                   Study with Lectern
                 </h2>
                 <p className="mt-8 text-md text-gray-100">
-                  Use Lectern's built in learning system to 
+                  Use Lectern&#39;s built in learning system to 
                   review materials, track progress, and more.
                 </p>
                 <SignInButton >
